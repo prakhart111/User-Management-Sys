@@ -1,0 +1,46 @@
+<!-- header  -->
+    <%- include('partials/_header') %>
+<!-- /header  -->
+
+<!-- main body  -->
+<main id="site-main">
+
+    <div class="btn d-flex justify-between">
+        <a href="/add-user" class="border-shadow">
+            <span class="new-user-link">
+                Add New User<i class="fa-solid fa-user"></i>
+            </span>
+        </a>
+    </div>
+
+    <div class="container">
+        
+
+        <form action="/" method="POST" id="form_to_shift">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name </th>
+                        <th>Email</th>
+                        <th>Gender </th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%- include('partials/_show') %>
+                </tbody>
+            </table>
+        </form>
+    </div> <!-- end of container-->
+</main>
+<!-- main ends  -->
+
+
+<!-- footer  -->
+    <%- include('partials/_footer') %>
+<!-- /footer  -->
+
+</body>
+</html>

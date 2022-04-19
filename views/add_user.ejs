@@ -1,0 +1,34 @@
+<!-- header  -->
+<%- include('partials/_header') %>
+<!-- /header  -->
+
+<!-- main body  -->
+    <main id="site-main">
+
+        <div class="btn d-flex justify-between">
+            <a href="/" class="border-shadow">
+                <span class="filter new-user-link">
+                    <i class="fas fa-angle-double-left"></i> All Users
+                </span>
+            </a>
+        </div>
+
+        <div class="container-form text-center">
+            <div class="form-title text-center">
+                <h2 >Add New User</h2>
+                <span >Fill up theform below to add a new user.</span>
+            </div>
+
+            <!--Form-->
+            <%- include('partials/_form') %>
+
+        </div> <!-- end of container-->
+    </main>
+
+
+<!-- footer  -->
+<%- include('partials/_footer') %>
+<!-- /footer  -->
+
+</body>
+</html>

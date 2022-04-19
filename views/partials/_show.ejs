@@ -1,0 +1,18 @@
+<!-- // Looping over all values  -->
+<% for(var i=0;i < user.length;i++) { %>
+<tr>
+    <td><%= i+1 %></td>
+    <td><%= user[i].name %></td>
+    <td><%= user[i].email %></td>
+    <td><%= user[i].gender %></td>
+    <td><%= user[i].status %></td>
+    <td>
+        <a href="/update-user?id=<%= user[i]._id%>" class="btn border-shadow update">
+            <span class="action-btn"><i class="fa-solid fa-pencil"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id="<%= user[i]._id%>" >
+            <span class="action-btn"><i class="fa-solid fa-x"></i></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

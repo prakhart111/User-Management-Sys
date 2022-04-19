@@ -1,0 +1,77 @@
+<!-- header  -->
+<%- include('partials/_header') %>
+<!-- /header  -->
+
+<!-- main body  -->
+    <main id="site-main">
+
+        <div class="btn d-flex justify-between">
+            <a href="/" class="border-shadow">
+                <span class="filter new-user-link">
+                    <i class="fas fa-angle-double-left"></i> All Users
+                </span>
+            </a>
+        </div>
+
+        <div class="container-form text-center">
+            <div class="form-title text-center">
+                <h2 >Update User</h2>
+                <span >Fill up the form below to update user.</span>
+            </div>
+
+            <!--Form === Here we want autofill tech-->
+            <form method="POST" id="update_user">
+                <div class="new_user">
+            
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="hidden" name="id" value="<%= user._id %>">
+                        <input type="text" name="name" value="  <%= user.name%>" placeholder="   Enter Username">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" value="  <%= user.email%>" placeholder="   example@yahoo.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div class="radio inline">  
+                            <input type="radio" name="gender" value="Male" <%= user.gender == 'Male' ? 'checked' : '' %> ><label for="gender" class="radio-label">Male</label>
+                        </div><div class="radio inline">
+                            <input type="radio" name="gender" value="Female" <%= user.gender == 'Female' ? 'checked' : ''%>><label for="gender" class="radio-label">Female</label>
+                        </div><div class="radio inline">
+                            <input type="radio" name="gender" value="LGBTQIA+" <%= user.gender == 'LGBTQIA+' ? 'checked' :'' %>><label for="gender" class="radio-label">LGBTQIA+</label>
+                        </div>
+                    </div>
+            
+                    <div class="form-group" id="status">
+                        <label for="status">Status</label>
+                        <div class="radio inline">
+                            <input type="radio" name="status" value="active"  <%= user.status == 'active' ? 'checked' :'' %>><label for="status" class="radio-label">Active</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" name="status" value="inactive"  <%= user.status == 'inactive' ? 'checked' :'' %>><label for="status" class="radio-label">Inactive</label>
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <button type="submit" class="btn update"> Save </button>
+                    </div>
+            
+            
+                </div>
+            </form>
+            
+            
+
+        </div> <!-- end of container-->
+    </main>
+
+
+<!-- footer  -->
+<%- include('partials/_footer') %>
+<!-- /footer  -->
+
+</body>
+</html>
